@@ -1,0 +1,148 @@
+/* Container for the form */
+.content-section {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Form Spacing */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* Input Fields */
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #5f788a;
+    box-shadow: 0 0 0 0.2rem rgba(95, 120, 138, 0.25);
+}
+
+/* Button Styling */
+.btn-outline-info {
+    color: #17a2b8;
+    background-color: transparent;
+    border: 1px solid #17a2b8;
+    padding: 7px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-outline-info:hover {
+    color: #fff;
+    background-color: #17a2b8;
+}
+
+/* Bottom Sign In Link */
+.border-top {
+    border-top: 1px solid #dee2e6;
+    margin-top: 20px;
+}
+
+.text-muted {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.text-muted a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.is_invalid {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff5f5;
+    border: 2px solid #e74c3c;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.is_invalid:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.25);
+}
+
+.invalid_message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* Container for the checkbox and label */
+.form-check {
+    display: flex;
+    align-items: center; /* Vertically centers the checkbox with the text */
+    gap: 8px;            /* Adds a small space between box and label */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Specific styling for the checkbox input */
+.form-check-input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Styling for the checkbox label */
+.form-check-label {
+    font-size: 0.9rem;
+    color: #6c757d;      /* Muted gray to match the "Sign In" link */
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+/* Container styling for the 'Forgot Password' area */
+small {
+    display: block;        /* Ensures it sits on its own line */
+    margin-top: 5px;       /* Space between the input/checkbox and the link */
+}
+
+/* Link styling */
+small a {
+    color: #6c757d;        /* Muted gray to match your 'Remember Me' label */
+    text-decoration: none; /* Removes the default underline */
+    font-size: 0.85rem;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Hover effect */
+small a:hover {
+    color: #17a2b8;        /* Changes to the info-blue color when hovered */
+    text-decoration: underline;
+}

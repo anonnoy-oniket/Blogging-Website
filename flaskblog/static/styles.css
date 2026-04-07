@@ -138,6 +138,39 @@ body {
     font-size: 14px;
 }
 
+/* Account Page Specific Styles */
+.content-section {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.media {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 25px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    object-fit: cover;   /* Prevents image stretching */
+}
+
+.account-heading {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.text-secondary {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
 
 /* --- Responsive Design --- */
 

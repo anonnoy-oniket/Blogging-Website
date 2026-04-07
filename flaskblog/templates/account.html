@@ -1,17 +1,60 @@
 {% extends 'layout.html' %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='forms.css')}}">
+{% endblock head %}
+
 {% block content %}
 
 <div class="content-section">
     <div class="media">
         <img class="rounded-circle account-img"
-            src="default.jpg">
+            src={{image_file}}>
 
         <div class="media-body">
             <h2 class="account-heading">{{ current_user.username }}</h2>
             <p class="text-secondary">{{ current_user.email }}</p>
         </div>
     </div>
+
+    <form method="POST" action="">
+        {{form.hidden_tag()}}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Account Info</legend>
+
+            <div class="form-group">
+                {{ form.username.label() }}
+                {% if form.username.errors %}
+                    {{ form.username(class="form-control, is_invalid", placeholder="Enter your username") }}
+                    <div class="invalid_message">
+                        {% for error in form.username.errors %}
+                            <span> {{ error }} </span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username(class="form-control", placeholder="Enter your username") }}  
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.email.label() }}
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control, is_invalid", placeholder="Enter your email") }}
+                    <div class="invalid_message">
+                        {% for error in form.email.errors %}
+                            <span> {{ error }} </span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="form-control", placeholder="Enter your email") }}  
+                {% endif %}
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            {{ form.submit(class="btn-outline-info") }}
+        </div>
+    </form>
 
 </div>
 

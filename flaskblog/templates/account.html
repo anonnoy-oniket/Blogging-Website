@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <form method="POST" action="">
+    <form method="POST" action="" enctype="multipart/form-data">
         {{form.hidden_tag()}}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Account Info</legend>
@@ -47,6 +47,17 @@
                     </div>
                 {% else %}
                     {{ form.email(class="form-control", placeholder="Enter your email") }}  
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.picture.label() }}
+                {{ form.picture() }}
+                <br><br>    
+                {% if form.picture.errors %}
+                    {% for error in form.picture.errors %}
+                        <span class="invalid_message"> {{ error }} </span> </div><br>
+                    {% endfor %}
                 {% endif %}
             </div>
         </fieldset>

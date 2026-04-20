@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='forms.css')}}">
+{% endblock head %}
+
+{% block content %}
+    <section class="content-section">
+        <form method="POST" action="">
+            {{form.hidden_tag()}}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">New Post</legend>
+
+                <div class="form-group">
+                    {{ form.title.label() }}
+                    {% if form.title.errors %}
+                        {{ form.title(class="form-control, is_invalid", placeholder="Enter your title") }}
+                        <div class="invalid_message">
+                            {% for error in form.title.errors %}
+                                <span> {{ error }} </span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.title(class="form-control", placeholder="Enter your title") }}  
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.content.label() }}
+                    {% if form.content.errors %}
+                        {{ form.content(class="form-control, is_invalid", placeholder="Enter your content") }}
+                        <div class="invalid_message">
+                            {% for error in form.content.errors %}
+                                <span> {{ error }} </span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.content(class="form-control", placeholder="Enter your content") }}  
+                    {% endif %}
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                {{ form.submit(class="btn-outline-info") }}
+            </div>
+        </form>
+    </section>
+{% endblock content %}

@@ -172,6 +172,50 @@ body {
     font-size: 1.1rem;
 }
 
+/*---- post card style ---------*/
+/* Container for the profile pic and info */
+.post-header {
+    display: flex;
+    align-items: center; /* Vertically centers the text with the image */
+    margin-bottom: 15px; /* Spacing between header and title */
+}
+
+/* The Profile Picture */
+.article-img.rounded-circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; /* Makes it perfectly round */
+    object-fit: cover;  /* Prevents stretching if the image isn't square */
+    margin-right: 12px; /* Spacing between image and name */
+}
+
+/* Metadata Text */
+.post-metadata {
+    display: flex;
+    gap: 10px; /* Space between username and date */
+    font-size: 0.9rem;
+}
+
+.author {
+    font-weight: bold;
+    color: #007bff; /* Optional: makes the name pop like a link */
+}
+
+.date {
+    color: #666;
+}
+
+/* Title and Content Spacing */
+.post-title {
+    margin-bottom: 10px; /* Spacing between title and content */
+    font-size: 1.5rem;
+}
+
+.post-content {
+    line-height: 1.6;
+    color: #333;
+}
+
 /* --- Responsive Design --- */
 
 /* This triggers when the screen width is 768px or less (Tablets/Phones) */

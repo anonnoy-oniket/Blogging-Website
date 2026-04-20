@@ -28,14 +28,14 @@
                 <div class="form-group">
                     {{ form.content.label() }}
                     {% if form.content.errors %}
-                        {{ form.content(class="form-control, is_invalid", placeholder="Enter your content") }}
+                        {{ form.content(class="form-control, is_invalid", placeholder="Enter your content", rows=10) }}
                         <div class="invalid_message">
                             {% for error in form.content.errors %}
                                 <span> {{ error }} </span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.content(class="form-control", placeholder="Enter your content") }}  
+                        {{ form.content(class="form-control", placeholder="Enter your content", rows=10) }}  
                     {% endif %}
                 </div>
             </fieldset>

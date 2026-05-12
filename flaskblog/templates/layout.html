@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if title %}
-    <title>Flask Blog - {{ title }}</title>
+    <title>RUET Blog - {{ title }}</title>
     {% else %}
-    <title>Flask Blog</title>
+    <title>RUET Blog</title>
     {% endif %}
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     {% block head %}
@@ -19,7 +19,7 @@
     <header class="navbar">
         <nav class="container">
             <div class="nav-left">
-                <a href="{{url_for('home')}}" class="logo">Flask Blog</a>
+                <a href="{{url_for('home')}}" class="logo">RUET Blog</a>
                 <a href="{{url_for('home')}}">Home</a>
                 <a href="{{url_for('about')}}">About</a>
             </div>

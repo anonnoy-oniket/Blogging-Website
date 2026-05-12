@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<article class="post-card">
+    <div class="post-header">
+        <img src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}" class="rounded-circle article-img" alt="">
+        <div class="post-metadata">
+            <span class="author">{{ post.author.username }}</span>
+            <span class="date">{{ post.date_posted.strftime('%Y-%m-%d') }}</span>
+        </div>
+        
+        {% if post.author == current_user %}
+            <div class="post-actions">
+                <a class="btn btn-update" href="{{ url_for('update_post', post_id=post.id) }}">Update</a>
+                <a class="btn btn-delete" href="{{ url_for('delete_post', post_id=post.id) }}">Delete</a>
+            </div>
+        {% endif %}
+    </div>
+    <h2 class="post-title">{{ post.title }}</h2>
+    <p class="post-content">{{ post.content }}</p>
+</article>
+
+
+{% endblock %}
+

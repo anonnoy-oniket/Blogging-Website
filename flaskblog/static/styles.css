@@ -216,6 +216,61 @@ body {
     color: #333;
 }
 
+.no_anchor_style {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer; /* Keeps the hand icon so users know it's still clickable */
+}
+
+/* Optional: Ensures no style changes when clicked or hovered */
+.no_anchor_style:hover, 
+.no_anchor_style:focus, 
+.no_anchor_style:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Button Container */
+.post-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Base button styles */
+.btn {
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Update Button */
+.btn-update {
+    color: #17a2b8;
+    border-color: #17a2b8;
+    background: transparent;
+}
+
+.btn-update:hover {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Delete Button */
+.btn-delete {
+    color: #dc3545;
+    border-color: #dc3545;
+    background: transparent;
+}
+
+.btn-delete:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
 /* --- Responsive Design --- */
 
 /* This triggers when the screen width is 768px or less (Tablets/Phones) */
